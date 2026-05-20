@@ -6,11 +6,21 @@ A [Claude Code](https://claude.com/claude-code) skill. Built for Hebrew Torah sh
 
 ## Install
 
+Via [skills.sh](https://www.skills.sh/) — the package manager for agent skills:
+
 ```bash
+# Global (recommended) — available from any directory, all agents on your system:
 npx skills add -g eladcandroid/video-summary-skill
+
+# Project-only — installs into ./.agents/skills/ for the current project:
+npx skills add eladcandroid/video-summary-skill
 ```
 
-This drops the skill into `~/.claude/skills/video-summary/` so Claude Code can use it from any directory.
+The skill auto-installs into the Claude Code agent directory (`.claude/skills/`) and to any other Claude-Code-compatible agents you have. To force a specific agent:
+
+```bash
+npx skills add -g eladcandroid/video-summary-skill -a claude-code
+```
 
 ## Use
 
